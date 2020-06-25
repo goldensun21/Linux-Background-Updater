@@ -1,0 +1,5 @@
+Add the following lines to the bottom of your crontab
+
+*/5 * * * * bash /home/automaton/scripts/cannonbeach/cannonbeach.sh
+0 3 * * * bash /home/automaton/scripts/cannonbeach/archive.sh
+
