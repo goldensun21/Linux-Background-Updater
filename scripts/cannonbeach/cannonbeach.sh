@@ -13,7 +13,7 @@ sleep 1
 
 #Remove old current photo
 rm ~/background/current/cannon_beach*
-ssh $REMOTEUSER@$HOSTIP "rm /Users/isaac/Pictures/Desktop\\ Photos/cannon_beach_*"
+ssh $REMOTEUSER@$HOSTIP "rm /path/to/other/host/cannon_beach_*"
 
 #Navigate to working download directory
 cd ~/scripts/cannonbeach/photos/
@@ -29,4 +29,4 @@ cp CNHNB_l.jpg ~/scripts/cannonbeach/photos/dailyarchive/cannon_beach_$(date +%m
 mv CNHNB_l.jpg ~/background/current/cannon_beach_$(date +%m-%d-%Y_%H-%M).jpg
 
 #Send to remote host
-rsync -az ~/background/current/cannon_beach_* $REMOTEUSER@$HOSTIP:"/Users/isaac/Pictures/Desktop\\ Photos/"
+rsync -az ~/background/current/cannon_beach_* $REMOTEUSER@$HOSTIP:"/path/to/host/desktop/photos/folder"
